@@ -1,3 +1,4 @@
+import time
 maxnum = int(input("Max: "))
 def mersenne(p):
     s = 4
@@ -19,8 +20,12 @@ def prime(number):
 
     return True
 for i in range(1, maxnum, 2):  # generate up to M20, found in 1961
+    start = time.time()
     if prime(i) and mersenne(i):
+        end = time.time()
         b = ((2 ** i) - 1)
-        print("2^"+str(i)+" -1")
+        z = (end-start)
+        z = round(z,4)
+        print("2^"+str(i)+" -1 is a mersenne prime and it took",z,"seconds to compute")
 print("done")
 
