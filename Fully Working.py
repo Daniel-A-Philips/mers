@@ -19,7 +19,7 @@ def prime(number):
         i += 2
 
     return True
-for i in range(1, maxnum, 2):  # generate up to M20, found in 1961
+for i in range(82589933, maxnum, 2):  # generate up to M20, found in 1961
     start = time.time()
     if prime(i) and mersenne(i):
         end = time.time()
